@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import { ItemProvider } from "./context/ItemContext";
 import { ToastProvider } from "./context/ToastContext";
@@ -32,6 +32,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
             <Toast />
           </div>

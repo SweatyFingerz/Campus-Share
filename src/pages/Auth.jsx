@@ -36,7 +36,7 @@ export default function Auth() {
         await register(email, password, displayName);
         addToast("Account created successfully!");
       }
-      navigate("/dashboard");
+      navigate("/");
     } catch (err) {
       const messages = {
         "auth/email-already-in-use": "This email is already registered.",
